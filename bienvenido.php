@@ -23,12 +23,14 @@
 <style>
     body {
         margin: 0px;
-        background-color: #0D1F22;
+        background-color: #14181c;
     }
     .header {
-        background-color: #0D1F22;
+        background-color: #14181c;
         width: 100%;
         height: 65px ;
+        display: flex;
+        justify-content: space-between;
     }
     .header__img {
         width: 200px;
@@ -56,10 +58,10 @@
 </style> 
 <body>
     <header class="header">
-        <img class="header__img" src="D:\Users\Pictures\logo.png" alt="">
+        <img class="header__img" src="resources\logo.png" alt="">
         <div class="header__menu">
             <div class="header__menu--profile">
-                <img src="D:\Users\Pictures\profile.png" alt="User">
+                <img src="resources\profile.png" alt="User">
                 <p>Perfil</p>
             </div>
             <ul>
