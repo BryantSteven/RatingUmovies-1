@@ -44,8 +44,9 @@
                     <input type="text" placeholder="Correo Electrónico" name="correo">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <div class="form-group">
-                    <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button>
-                    </div>
+                    <button>Iniciar Sesión</button>
+                   <!-- <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button> -->
+                    </div> 
                 <div class="form-group">
                     <div id="my-signin2"  data-width="300" data-height="40" data-longtitle="false"></div>
                         <script>
@@ -78,7 +79,7 @@
                     <input type="text" placeholder="Correo Electronico" name="correo">
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="password" placeholder="Contraseña" name="contrasena">
-                    <button>Entrar</button>
+                    <button>Registra</button>
                 </form>
             </div>
 
