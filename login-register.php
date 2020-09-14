@@ -21,7 +21,7 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=347058202993916&autoLogAppEvents=1" nonce="5Ct4tpao"></script>
+<script async defer crossorigin="anonymous" src="https://connect..net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=347058202993916&autoLogAppEvents=1" nonce="5Ct4tpao"></script>
     <main> <!--control proyecto-->
         <div class="contenedor__todo">
             <div class="caja__trasera">
@@ -59,7 +59,7 @@
                           function renderButton() {
                             gapi.signin2.render('my-signin2', {
                               'scope': 'profile email',
-                              'width': 200,
+                              'width': 300,
                               'height': 40,
                               'longtitle': true,
                               'theme': 'dark',
@@ -79,7 +79,7 @@
                     <input type="text" placeholder="Correo Electronico" name="correo">
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="password" placeholder="Contraseña" name="contrasena">
-                    <button>Registra</button>
+                    <button>Registrar</button>
                 </form>
             </div>
 
