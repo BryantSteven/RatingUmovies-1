@@ -59,7 +59,7 @@
                           function renderButton() {
                             gapi.signin2.render('my-signin2', {
                               'scope': 'profile email',
-                              'width': 300,
+                              'width': 200,
                               'height': 40,
                               'longtitle': true,
                               'theme': 'dark',
