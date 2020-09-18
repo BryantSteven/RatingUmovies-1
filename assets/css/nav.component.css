@@ -1,0 +1,90 @@
+.menu{
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+    font-size: 20px;
+    margin-left: 2em;
+    margin-top:20px ;
+}
+h2{
+    font-size: 18px;
+    margin-left: 2em;
+    margin-top:20px ;
+}
+h3{
+    color: #787477;
+    font-size: 16px;
+    margin-left: 2.3em;
+
+}
+hr{
+    margin-top: 10px;
+}
+
+button{
+    color:#ffff;
+    background: #140E51;
+    border-radius: 5px;
+    margin-left: 2em;
+    width: 348px;
+    height: 45px;    
+}
+button:hover{
+    background: #251B88;
+}
+button:active{
+ background: #130E46;   
+ transform: translateY(4px);
+}
+button:focus{
+    background: #251B88;
+    border-style: dashed;
+    border-width: 3px;
+}
+select{
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#dtBasicExample{
+    margin-top: 1em;
+    margin-left: 2em;
+    font-size: 16px;
+    width: 60%;
+}
+.h{
+    text-indent: 20px;
+    font-size: 20px;
+}
+#formAgregar{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 50%;
+    margin-left: 2em;
+}
+#formAgregar input{
+    width: 80%;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 2em;
+}
+.secundarios{
+    color: #87297F;
+    background: #ffff;
+    border-radius: 5px;
+    width: 200px;
+    height: 45px; 
+}
+.secundarios:hover{
+    background: #87297F22;
+}
+.secundarios:active{
+    background: #87297F;
+}
+.secundarios:focus{
+    background: #ffffff;
+    border-style: dashed;
+    border-width: 3px;
+}
+#cerrar{
+    background: transparent;
+}

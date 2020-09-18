@@ -28,7 +28,6 @@
           die();
       }
       //session_destrodfsfy();
-  ?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
