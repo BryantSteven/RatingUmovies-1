@@ -85,6 +85,19 @@
   animation-duration: 1.5s;
 }
 
+.tooltip
+{
+	position:absolute;
+	background-color:#eeeefe;
+	border: 1px solid #aaaaca;
+	font-size: smaller;
+	padding:4px;
+	width: 160px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);	
+}
+
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}

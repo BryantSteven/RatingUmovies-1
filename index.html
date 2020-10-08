@@ -15,7 +15,6 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand bg-primary navigation-clean fixed-top">
         <div class="container"><a class="navbar-brand bg-primary border-light shadow-lg" href="#">Rating Umovies</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"></button>
-            
             <div class="collapse navbar-collapse" id="navcol-1"> 
                 <a class="btn btn-primary ml-auto " role="button" href="#">Sign In</a>
                 <a class="btn btn-primary" role="button" href="#">Log in</a>
@@ -47,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="mb-5">Trailer Del Mes</h1>
+                    <h1 class="mb-5" >Trailer Del Mes</h1>
                     <div id="player"></div>
                     <script>
                         // 2. Carga el IFrame Player API De forma asyncronica.
@@ -104,13 +103,13 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item  active">
-                <img class="" src="assets\images\star_wars_re.jpg"  alt="First slide" style="display:inline-block;">
-                <img class="" src="assets\images\percy.jpg" alt="Second slide" style="display:inline-block;"> 
-                <img class="" src="assets\images\poster\black-panther-web.jpg" alt="Second slide" width="159" height="229"> 
-                <img class="" src="assets\images\poster\it.jpg" alt="Second slide" width="159" height="229"> 
-                <img class="" src="assets\images\poster\Malditos_Bastardos_portada.jpg" alt="Second slide" width="159" height="229">
-                <img class="" src="assets\images\poster\poster-vengadores-endgame.jpg" alt="Second slide" width="159" height="229">
-                <img class="" src="assets\images\poster\star.jpg" alt="Second slide" width="159" height="229">
+                <img class="" data-toggle="tooltip" title="Harley Queen!" src="assets\images\poster\harleyqueen.jpg"  alt="First slide" style="display:inline-block;" width="159" height="229">
+                <img class="" id="img1" data-toggle="tooltip" title="Percy Jackson El Mar de los Monstruos" src="assets\images\percy.jpg"  alt="Second slide" style="display:inline-block;"> 
+                <img class=""  id="img2" data-toggle="tooltip" title="Pantera Negra" src="assets\images\poster\black-panther-web.jpg" alt="Second slide" width="159" height="229"> 
+                <img class="" data-toggle="tooltip" title="IT" src="assets\images\poster\it.jpg" alt="Second slide" width="159" height="229"> 
+                <img class="" data-toggle="tooltip" title="Malditos Bastardos!" src="assets\images\poster\Malditos_Bastardos_portada.jpg" alt="Second slide" width="159" height="229">
+                <img class="" data-toggle="tooltip" title="Vengadores End Game" src="assets\images\poster\poster-vengadores-endgame.jpg" alt="Second slide" width="159" height="229">
+                <img class="" data-toggle="tooltip" title="Star Wars" src="assets\images\poster\star.jpg" alt="Second slide" width="159" height="229">
             
               </div>
               <div class="carousel-item">
@@ -122,9 +121,7 @@
                 <img class="" src="assets\images\poster\harleyqueen.jpg" alt="Second slide" style="display: inline-block;"  width="159" height="229">
               
               </div>
-              <div class="carousel-item ">
-                <img class="" src="assets\images\anita.jpg" alt="Third slide" width="159" height="229">
-              </div>
+
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -135,6 +132,10 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+          <div style="margin-top: 30px;">
+            <label for="" id="Label1"></label>
+          </div>
+          <script src="assets\js\visual.js"></script>
     </section>
 
     <footer class="footer bg-light">
@@ -163,7 +164,15 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-</body>
+
+    <script>
+      $(document).ready(function() {
+    $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+      });
+    </script>
+
+  </body>
 
 </html>
