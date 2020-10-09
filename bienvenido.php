@@ -119,7 +119,6 @@
               <input type="email" id="defaultContactFormEmail" class="form-control mb-4">
 
               <!-- Button trigger modal -->
-              <!-- Button trigger modal -->
               <button type="button" class="secundarios" data-toggle="modal" data-target="#basicExampleModal">
                 Launch demo modal
               </button><br><br>

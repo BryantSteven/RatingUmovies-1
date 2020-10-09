@@ -43,7 +43,7 @@
                     <input type="text" placeholder="Correo Electrónico" name="correo">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <div class="form-group">
-                    <button  >Iniciar Sesión</button>
+                    <button style="width:300px" >Iniciar Sesión</button>
                    <!-- <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button> -->
                     </div> 
                 <div class="form-group">
