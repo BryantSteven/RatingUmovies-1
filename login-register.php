@@ -74,7 +74,8 @@
                 <!--Caja-Formulario Registro-->
                 <form action="php\registro_usuario_be.php" method="POST" class="formulario__register">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre Completo" name="nombre_completo">
+                    <input type="text" placeholder="Nombre" name="nombre_completo">
+                    <input type="text" placeholder="Apellido" name="apellido">
                     <input type="text" placeholder="Correo Electronico" name="correo">
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="password" placeholder="Contraseña" name="contrasena">
