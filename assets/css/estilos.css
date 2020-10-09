@@ -116,6 +116,9 @@ main{
 .formulario__register{
     display: none;
 }
+#btnInicio{
+    width: 300px;
+}
 
 /*Responsive Design*/
 

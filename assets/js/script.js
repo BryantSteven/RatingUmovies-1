@@ -1,15 +1,15 @@
+//******************Funcionamiento y transiciones animadas de los formularios de LOGIN y REGISTRO************************************//
+
 document.getElementById("btn__registrarse").addEventListener("click", register);
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion)
 window.addEventListener("resize", anchoPagina);
 
 //Declaración de variables: 
-
 var contenedor_login_register = document.querySelector(".contenedor__login-register");
 var formulario_login = document.querySelector(".formulario__login");
 var formulario_register = document.querySelector(".formulario__register");
 var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
-
 function anchoPagina(){
     if(window.innerWidth > 850){
         caja_trasera_login.style.display = "block";
@@ -23,8 +23,6 @@ function anchoPagina(){
         contenedor_login_register.style.left = "0px";
     }
 }
-
-
 function iniciarSesion(){
     if(window.innerWidth > 850){
         formulario_register.style.display = "none";
@@ -38,11 +36,8 @@ function iniciarSesion(){
         formulario_login.style.display = "block";
         caja_trasera_register.style.display = "block";
         caja_trasera_login.style.opacity= "0";
-    }
-
-    
+    }    
 }
-
 function register(){
     if(window.innerWidth >850){
         formulario_register.style.display = "block"; //Click al botón registrarse

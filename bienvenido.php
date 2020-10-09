@@ -50,7 +50,9 @@
     <!--Navegación interna de las pestañas-->
     <div class="tab-content" id="myTabContent">
 
-      <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">1</div>
+      <div class="tab-pane fade" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">
+      <a class="btn btn-primary ml-auto" role="button" href="index.html">Inicio</a>
+      </div>
       <div class="tab-pane fade" id="publicaciones" role="tabpanel" aria-labelledby="publicaciones-tab">2</div>
       <div class="tab-pane fade " id="perfil" role="tabpanel" aria-labelledby="perfil-tab">
         <div class="wrapper-editor">

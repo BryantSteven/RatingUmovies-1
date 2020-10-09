@@ -2,7 +2,7 @@
     session_start();
 
     if(isset($_SESSION['usuario'])){
-        header("location:bienvenido.php");
+        header("location:index.html");
     }
 ?>
 
@@ -21,7 +21,6 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=347058202993916&autoLogAppEvents=1" nonce="5Ct4tpao"></script>
     <main> <!--control proyecto-->
         <div class="contenedor__todo">
             <div class="caja__trasera">
@@ -44,7 +43,7 @@
                     <input type="text" placeholder="Correo Electrónico" name="correo">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <div class="form-group">
-                    <button>Iniciar Sesión</button>
+                    <button  >Iniciar Sesión</button>
                    <!-- <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button> -->
                     </div> 
                 <div class="form-group">
@@ -70,7 +69,7 @@
                         </script>
                         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
                 </div>
-                    <div class="fb-login-button " data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width="300"></div>                         
+                                           
                 </form>
                 <!--Caja-Formulario Registro-->
                 <form action="php\registro_usuario_be.php" method="POST" class="formulario__register">
