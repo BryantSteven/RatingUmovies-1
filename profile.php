@@ -17,25 +17,25 @@ $user = (object)[
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Mi perfil</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background-color: black">
-        <div style="position: absolute;top:0;left:0;width:100%;height:100%;background: url('assets/img/wallpaper1.jpg');opacity: 0.4;z-index: -1;">
+        <div style="position: absolute;top:0;left:0;width:100%;height:100%;background: url('assets/images/wallpaper1.jpg');opacity: 0.4;z-index: -1;">
         </div>
 
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Mi perfil</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profileOscar.jpg" alt="" /></span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/images/profileOscar.jpg" alt="" /></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -115,7 +115,7 @@ $user = (object)[
                 <h2 class="mb-5">Contenido recomendado por mi</h2>
                 <div class="row">
                 <div class="card col-4">
-                        <img class="card-img-top" src="assets/img/Movie1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/images/Movie1.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Consumir api para titulo y caratula</h5>
                             <p class="card-text">consumir api para descripcion</p>
@@ -130,7 +130,7 @@ $user = (object)[
                         </div>
                     </div>
                     <div class="card col-4">
-                        <img class="card-img-top" src="assets/img/Movie2.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/images/Movie2.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Consumir api para titulo y caratula</h5>
                             <p class="card-text">consumir api para descripcion</p>
@@ -145,7 +145,7 @@ $user = (object)[
                         </div>
                     </div>
                     <div class="card col-4">
-                        <img class="card-img-top" src="assets/img/Movie3.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/images/Movie3.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Consumir api para titulo y caratula</h5>
                             <p class="card-text">consumir api para descripcion</p>
@@ -169,7 +169,7 @@ $user = (object)[
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="assets/js/scripts_profile.js"></script>
 </body>
 
 </html>

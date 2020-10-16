@@ -1,13 +1,14 @@
-<?php
-    session_start();
+<!-- <?php
+// session_start();
 
-    if(isset($_SESSION['usuario'])){
-        header("location:index.html");
-    }
-?>
+// if (isset($_SESSION['usuario'])) {
+//     header("location:index.html");
+// }
+?>  -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +20,11 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="165414458909-dtip83puhgqmpjq9smk13ldm5ttmgp7c.apps.googleusercontent.com">
 </head>
+
 <body>
-<div id="fb-root"></div>
-    <main> <!--control proyecto-->
+    <div id="fb-root"></div>
+    <main>
+        <!--control proyecto-->
         <div class="contenedor__todo">
             <div class="caja__trasera">
                 <div class="caja__trasera-login">
@@ -34,42 +37,44 @@
                     <p>Registrate para ingresar</p>
                     <button id="btn__registrarse">Registrarse</button>
                 </div>
-            </div> 
+            </div>
             <div class="contenedor__login-register">
                 <!--Caja-Formulario Login-->
                 <form action="php\login_usuario_be.php" method="POST" class="formulario__login">
-                    
+
                     <h2>Iniciar Sesión</h2>
                     <input type="text" placeholder="Correo Electrónico" name="correo">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <div class="form-group">
-                    <button style="width:300px" >Iniciar Sesión</button>
-                   <!-- <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button> -->
-                    </div> 
-                <div class="form-group">
-                    <div id="my-signin2"  data-width="300" data-height="40" data-longtitle="false"></div>
+                        <button style="width:300px">Iniciar Sesión</button>
+                        <!-- <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button> -->
+                    </div>
+                    <div class="form-group">
+                        <div id="my-signin2" data-width="300" data-height="40" data-longtitle="false"></div>
                         <script>
-                          function onSuccess(googleUser) {
-                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                          }
-                          function onFailure(error) {
-                            console.log(error);
-                          }
-                          function renderButton() {
-                            gapi.signin2.render('my-signin2', {
-                              'scope': 'profile email',
-                              'width': 300,
-                              'height': 40,
-                              'longtitle': true,
-                              'theme': 'dark',
-                              'onsuccess': onSuccess,
-                              'onfailure': onFailure
-                            });
-                          }
+                            function onSuccess(googleUser) {
+                                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                            }
+
+                            function onFailure(error) {
+                                console.log(error);
+                            }
+
+                            function renderButton() {
+                                gapi.signin2.render('my-signin2', {
+                                    'scope': 'profile email',
+                                    'width': 300,
+                                    'height': 40,
+                                    'longtitle': true,
+                                    'theme': 'dark',
+                                    'onsuccess': onSuccess,
+                                    'onfailure': onFailure
+                                });
+                            }
                         </script>
                         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-                </div>
-                                           
+                    </div>
+
                 </form>
                 <!--Caja-Formulario Registro-->
                 <form action="php\registro_usuario_be.php" method="POST" class="formulario__register">
@@ -90,4 +95,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
+
 </html>
