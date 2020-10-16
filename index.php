@@ -1,1 +1,1 @@
-<?php require_once("login-register.php") ?>
+<?php require_once("index.html") ?>
