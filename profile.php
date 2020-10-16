@@ -1,9 +1,17 @@
 <?php
 
+include 'php/conexion_be.php';
+
+session_start();
+$correo = $_SESSION['usuario'];
+$user_query = mysqli_query($conexion, "SELECT nombre_completo,correo,usuario FROM usuarios WHERE correo='$correo'");
+$dbuser = mysqli_fetch_assoc($user_query);
+// var_dump($user_query);
+
 $user = (object)[
-    'name' => 'Nombre 1',
-    'lastname' => 'Apellido 1',
-    'email' => 'Email@Mail.com'
+    'name' => $dbuser["nombre_completo"],
+    'nickname' => "({$dbuser['usuario']})",
+    'email' => $dbuser["correo"]
 
 ];
 
@@ -43,7 +51,7 @@ $user = (object)[
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre mi</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#likes">Mis gustos</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recomended_content">Contenido recomendado</a>
-                <a class="btn btn-primary" role="button" href="index.html">Regresar</a>
+                    <a class="btn btn-primary" role="button" href="index.html">Regresar</a>
                 </li>
 
             </ul>
@@ -56,14 +64,14 @@ $user = (object)[
             <div class="resume-section-content">
                 <h1 class="mb-0">
                     <?php echo $user->name; ?>
-                    <span class="text-primary"><?php echo $user->lastname; ?> </span>
+                    <span class="text-primary"><?php echo $user->nickname; ?> </span>
                 </h1>
                 <div class="subheading mb-5">
-                    Aqui debe ir el correo del usuario -->
+                    Correo de contacto :
                     <a href="mailto:<?php echo $user->email; ?>"><?php echo $user->email; ?></a>
                 </div>
-                <p class="lead mb-5">Aqui debe ir la descripcion que el usuario quiera darse, esto debe ser un campo
-                    editable</p>
+                <p class="lead mb-5">Correo de contacto :
+                </p>
                 <div class="social-icons">
                     <a class="social-icon" href="https://twitter.com/home?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a class="social-icon" href="https://www.facebook.com/?ref=tn_tnmn" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -115,7 +123,7 @@ $user = (object)[
             <div class="resume-section-content">
                 <h2 class="mb-5">Contenido recomendado por mi</h2>
                 <div class="row">
-                <div class="card col-4">
+                    <div class="card col-4">
                         <img class="card-img-top" src="assets/images/Movie1.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Consumir api para titulo y caratula</h5>
@@ -160,7 +168,7 @@ $user = (object)[
                             <a href="#" class="card-link">Este sera un link al detalle de la pelicula</a>
                         </div>
                     </div>
-            </div>
+                </div>
         </section>
         <hr class="m-0" />
 
