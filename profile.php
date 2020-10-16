@@ -43,6 +43,7 @@ $user = (object)[
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre mi</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#likes">Mis gustos</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recomended_content">Contenido recomendado</a>
+                <a class="btn btn-primary" role="button" href="index.html">Regresar</a>
                 </li>
 
             </ul>
