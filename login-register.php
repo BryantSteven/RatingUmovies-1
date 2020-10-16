@@ -4,6 +4,45 @@
     if(isset($_SESSION['usuario'])){
         header("location:index.html");
     }
+
+    include("php/config.php");
+
+    $login_button='';
+
+    if(isset($_GET["code"]))
+    {
+        $token = $google_client-> fetchAccessTokenWithAuthCode($_GET["code"]);
+
+        if(!isset($token['error'])){
+            $google_client->setAccessToken($token['access_token']);
+            
+            $_SESSION['access_token']= $token['access_token'];
+
+            $google_service = new Google_Service_Oauth2($google_client);
+
+            $data = $google_service-> userinfo->get();
+
+            if(!empty($data['given_name'])){
+                $_SESSION['user_first_name'] = $data['given_name'];
+            }
+            if(!empty($data['family_name'])){
+                $_SESSION['user_last_name'] = $data['family_name'];
+            }
+            if(!empty($data['email'])){
+                $_SESSION['user_email_address'] = $data['email'];
+            }
+            if(!empty($_SESSION['gender'])){
+                $_SESSION['user_gender'] = $data['gender'];
+            }
+            if(!empty($_SESSION['picture'])){
+                $_SESSION['user_image'] = $data['picture'];
+            }
+        }
+    }
+    if(!isset($_SESSION['access_token'])){
+        $login_button = '<a class="button" href="'.$google_client->createAuthUrl().'"><img src="resources\google-login-button.jpg" style="width: 300px; height: 50px; margin-left: -45;"/></a>';
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +50,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register - UMovies</title>
+    <title>Rating UMovies</title>
     <link rel="stylesheet" href="assets/css/estilos.css">
     <!--Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -22,6 +61,7 @@
 <body>
 <div id="fb-root"></div>
     <main> <!--control proyecto-->
+    
         <div class="contenedor__todo">
             <div class="caja__trasera">
                 <div class="caja__trasera-login">
@@ -32,54 +72,40 @@
                 <div class="caja__trasera-register form-group">
                     <h3>¿Aún no tienes una cuenta?</h3>
                     <p>Registrate para ingresar</p>
-                    <button id="btn__registrarse">Registrarse</button>
+                    <button id="btn__registrarse">Registrate</button>
                 </div>
             </div> 
             <div class="contenedor__login-register">
                 <!--Caja-Formulario Login-->
                 <form action="php\login_usuario_be.php" method="POST" class="formulario__login">
                     
-                    <h2>Iniciar Sesión</h2>
+                    <h2>Inicia Sesión</h2>
                     <input type="text" placeholder="Correo Electrónico" name="correo">
                     <input type="password" placeholder="Contraseña" name="contrasena">
                     <div class="form-group">
                     <button style="width:300px" >Iniciar Sesión</button>
                    <!-- <button type="button" class="btn btn-lg btn-primary">Iniciar Sesión</button> -->
                     </div> 
-                <div class="form-group">
-                    <div id="my-signin2"  data-width="300" data-height="40" data-longtitle="false"></div>
-                        <script>
-                          function onSuccess(googleUser) {
-                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                          }
-                          function onFailure(error) {
-                            console.log(error);
-                          }
-                          function renderButton() {
-                            gapi.signin2.render('my-signin2', {
-                              'scope': 'profile email',
-                              'width': 300,
-                              'height': 40,
-                              'longtitle': true,
-                              'theme': 'dark',
-                              'onsuccess': onSuccess,
-                              'onfailure': onFailure
-                            });
-                          }
-                        </script>
-                        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-                </div>
+                <!--Botón google-->
+                <?php
+                    if($login_button == ''){
+                        header("location:index.html");
+                        
+                    }
+                    else{
+                        echo '<div align="center">'.$login_button . '</div>';
+                    }
+                ?>
                                            
                 </form>
                 <!--Caja-Formulario Registro-->
                 <form action="php\registro_usuario_be.php" method="POST" class="formulario__register">
-                    <h2>Registrarse</h2>
+                    <h2>Registrate</h2>
                     <input type="text" placeholder="Nombre" name="nombre_completo">
-                    <input type="text" placeholder="Apellido" name="apellido">
                     <input type="text" placeholder="Correo Electronico" name="correo">
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="password" placeholder="Contraseña" name="contrasena">
-                    <button>Registra</button>
+                    <button>Completar registro</button>
                 </form>
             </div>
 
